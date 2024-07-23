@@ -1,0 +1,9 @@
+Threshold Checks:
+Trigger 1: If the amplitude falls below a certain threshold (Amp <= 6) and trigger2 is not already activated, it activates trigger1.
+Trigger 2: If trigger1 is activated and the amplitude exceeds another threshold (Amp >= 10), it activates trigger2, indicating a significant acceleration.
+Trigger 3: If trigger2 is activated, it measures the change in orientation. If the change in orientation falls within a specific range (between 80 and 100 degrees), it activates trigger3.
+Fall Detection Criteria:
+Trigger 1: This initial trigger likely represents the start of a fall event. It's activated when the amplitude falls below a certain threshold, indicating a change in acceleration.
+Trigger 2: This trigger indicates a significant acceleration event, possibly the impact of a fall. It's activated when the amplitude exceeds another threshold.
+Trigger 3: This trigger captures the change in orientation following the impact of the fall. It's activated when the orientation change falls within a specific range.
+Confirmation of Fall: After the activation of trigger3, it checks if the orientation remains within a certain range for a set period (trigger3count >= 10). If the orientation remains relatively constant (between 0 and 10 degrees), it confirms a fall event.
